@@ -1,0 +1,30 @@
+Package: iapsArgentina
+Date: 2022-12-16
+Title: Datos Normativos del IAPS En Poblacion Argentina
+Version: 0.0.0.9000
+Authors@R: c( 
+    person(given = "Natalia", 
+           family = "Irrazabal",
+           role = "aut",
+           email = "nirrazabal@psi.uba.ar",
+           comment = c(ORCID = "https://orcid.org/0000-0002-4940-516X")),
+    person(given = "Fernando", 
+           family = "Tonini",
+           role = c("aut", "cre"),
+           email = "ftonin@palermo.edu",
+           comment = c(ORCID = "https://orcid.org/0000-0001-6435-8923"))
+           )
+Description: Estos son los datos de la segunda y tercera validación de las imágenes del IAPS en argentina.
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Suggests: 
+    dplyr,
+    ggplot2,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

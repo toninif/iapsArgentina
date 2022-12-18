@@ -1,0 +1,77 @@
+---
+title: "Datos normativos de las validaciones del IAPS en argentina"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: >
+  %\VignetteIndexEntry{iapsArgentina}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+## Cargar el paquete
+
+```{r setup}
+# En caso de no tenerlo, entonces usar:
+# devtools::install_github("toninif/iapsArgentina")
+
+library(iapsArgentina)
+```
+
+
+## Datos
+
+### Segunda edición 
+
+Insertar una intro
+
+### Puntuaciones
+
+```{r ejemplo}
+
+library(dplyr)
+
+segunda_edicion |>
+  group_by(grupo) |>
+  summarise(n = n(),
+            Valencia_media = mean(val_M) |> round(2),
+            Activacion_media = mean(aro_M) |> round(2),
+            Control_media = mean(con_M) |> round(2),
+            .groups = "drop")
+
+
+```
+
+### Espacio bidimensional afectivo
+
+```{r ejemplo2, fig.show='hold'}
+
+library(ggplot2)
+
+ggplot(data = segunda_edicion, mapping = aes(x = val_M, y = aro_M)) +
+  geom_point(alpha = .5, colour = "lightblue") +
+  coord_flip()
+
+ggplot(data = segunda_edicion |> filter(grupo == "mujeres"), mapping = aes(x = val_M, y = aro_M)) +
+  geom_point(alpha = .7, colour = "gold") +
+  coord_flip()
+
+ggplot(data = segunda_edicion |> filter(grupo == "hombres"), mapping = aes(x = val_M, y = aro_M)) +
+  geom_point(alpha = .7, colour = "lightblue") +
+  coord_flip()
+
+
+```
+
+
+
+
