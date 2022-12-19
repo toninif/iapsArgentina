@@ -1,0 +1,10 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  iapsArgentina: iapsArgentina.html
+last_built: 2022-12-19T13:43Z
+urls:
+  reference: https://toninif.github.io/iapsArgentina/reference
+  article: https://toninif.github.io/iapsArgentina/articles
+
