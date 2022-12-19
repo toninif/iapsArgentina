@@ -28,5 +28,6 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: https://github.com/toninif/iapsArgentina
+URL: https://github.com/toninif/iapsArgentina,
+    https://toninif.github.io/iapsArgentina/
 BugReports: https://github.com/toninif/iapsArgentina/issues
